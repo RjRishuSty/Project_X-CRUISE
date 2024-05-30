@@ -1,224 +1,405 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html {
-    font-family: sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  background: rgb(0, 0, 51);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.logo {
+  width: 70%;
+  height: auto;
+}
+.logo img {
+  width: 90px;
+  height: 10vh;
+}
+.menu {
+  width: 30%;
+  height: auto;
+  padding: 10px;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.menu a {
+  color: white;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
   .navbar {
-    background: rgb(0, 0, 51);
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .logo {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-  }
-  .logo {
-    width: 70%;
-    height: auto;
-  }
-  .logo img {
-    width: 90px;
-    height: 10vh;
   }
   .menu {
-    width: 30%;
+    width: 100%;
     height: auto;
-    padding: 10px;
   }
   .menu ul {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    list-style: none;
   }
-  .menu a {
-    color: white;
-    font-weight: 500;
-  }
-  @media (max-width: 768px) {
-    .navbar {
-      display: grid;
-      grid-template-columns: 2fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    .logo {
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .menu {
-      width: 100%;
-      height: auto;
-    }
-    .menu ul {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-  }
-  
-  /* Start Hero Section */
-  .hero {
-    width: 100%;
-    height: 80vh;
-    background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/hero-cruise.png?raw=true);
-    background-size: cover;
-    color: white;
+}
+
+/* Start Hero Section */
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/hero-cruise.png?raw=true);
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero h1 {
+  text-align: center;
+}
+.hero button {
+  width: 220px;
+  height: 50px;
+  margin-top: 20px;
+  background: #ff6d02;
+  border-radius: 10px;
+  border: none;
+  color: wheat;
+  font-weight: 600;
+  font-weight: 0.8rem;
+}
+/* End Hero Section */
+
+/* discover Section */
+.discover {
+  padding: 20px 10px;
+}
+.discover .heading{
+  margin: 10px;
+  text-align: start;
+}
+
+.heading p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.popular {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 5px;
+}
+#popular-Heading {
+  font-weight: 700;
+}
+.pills {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pills-items {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.pills-items img {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .discover {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .hero h1 {
-    text-align: center;
-  }
-  .hero button {
-    width: 220px;
-    height: 50px;
-    margin-top: 20px;
-    background: #ff6d02;
-    border-radius: 10px;
-    border: none;
-    color: wheat;
-    font-weight: 600;
-    font-weight: 0.8rem;
-  }
-  /* End Hero Section */
-  
-  /* discover Section */
-  .discover {
-    border: 2px solid red;
-    padding: 20px 10px;
-  }
-  .heading {
-    margin: 10px;
-    padding: 10px;
-    text-align: start;
-  }
-  .heading p {
-    margin-top: 8px;
-    font-size: 1rem;
-  }
-  
-  .popular {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-top: 10px;
-  }
   #popular-Heading {
-    font-weight: 700;
+    font-size: 0.9rem;
   }
   .pills {
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   .pills-items {
-    border-radius: 20px;
+    font-size: 0.7rem;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    flex-direction: column;
+    margin-top: 15px;
   }
-  .pills-items img {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+  #popular-Heading {
+    text-align: center;
+  }
+  .pills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .pills-items {
+    font-size: 1rem;
     margin: 5px;
   }
+}
+
+/* Discover Section Banner  Image Part */
+.image-header {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/caribbean-cruise.png?raw=true);
+  background-size: cover;
+}
+.img-content {
+  padding: 20px;
+  color: white;
+}
+/* .............. */
+.card-section {
   
-  @media (max-width: 768px) {
-    .discover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    #popular-Heading{
-      font-size: 0.9rem;
-    }
-    .pills {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .pills-items{
-      font-size: 0.7rem;
-      margin: 5px;
-    }
-  }
-  
-  @media (max-width:480px) {
-    .popular {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-top: 15px;
-    }
-    #popular-Heading{
-      text-align: center;
-    }
-    .pills {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 100%;
-    }
-    .pills-items{
-      font-size: 1rem;
-      margin: 5px;
-    }
-  }
-  
-  
-  /* Discover Section Banner  Image Part */
-  .image-header{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/caribbean-cruise.png?raw=true);
-    background-size: cover;
-  }
-  .img-content{
-    padding: 20px;
-    color: white;
-  }
-  /* .............. */
-  .card-section{
-    border: 5px solid green;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50vh 50vh;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.card {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+.bookMark {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.bookMark img {
+  width: 30px;
+  height: auto;
+  background: rgb(182, 176, 176);
+  border-radius: 50%;
+  padding: 5px;
+}
+.card .card-heading {
+  position: relative;
+  top: 70%;
+  left: 0px;
+  color: white;
+}
+.card-heading p{
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+@media (max-width: 986px) {
+  .card-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh 50vh 50vh 50vh;
   }
-  .card{
-    border: 2px solid blue;
-    cursor: pointer;
+}
+@media (max-width: 480px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh 50vh 50vh;
   }
-  .card img{
+}
+
+/* card img  */
+#mediterranean {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/mediterranean-cruise.png?raw=true);
+  background-size: cover;
+}
+#dubai {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/dubai-cruise.png?raw=true);
+  background-size: cover;
+}
+#northern_europe {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/northern-europe-cruise.png?raw=true);
+  background-size: cover;
+}
+#red_sea {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/redsea-cruise.png?raw=true);
+  background-size: cover;
+}
+/*  */
+#bermuda {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/bermuda-beach-cruise.png?raw=true);
+  background-size: cover;
+}
+#south_africa {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/south-africa-cruise.png?raw=true);
+  background-size: cover;
+}
+#south_america {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/south-america-cruise.png?raw=true);
+  background-size: cover;
+}
+#asia {
+  background-image: url(https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/asia-cruise.png?raw=true);
+  background-size: cover;
+}
+
+
+/* Contact */
+
+#contact{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 20px 10px;
+}
+.contact-items{
+  width: 100%;
+  margin: 10px;
+}
+.contact_info{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.contact-items h4{
+  padding: 5px 0px;
+}
+@media (max-width:768px) {
+  .contact-items{
+    flex-wrap: wrap;
+  }
+}
+
+/* Footer Section */
+.footer{
+  width: 100%;
+  height: auto;
+  background: #000033;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container{
+  width: 90%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50vh;
+}
+.footer_box{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  margin: 5px;
+}
+.footer_box h2{
+  color: #ef970c;
+  text-transform: uppercase;
+}
+.box-items{
+  list-style: none;
+  margin-top: 10px;
+}
+.box-items li{
+  margin: 10px;
+}
+.box-items a{
+  color: white;
+}
+
+/* icon */
+.social-icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-icons h2{
+  margin-top:15px;
+}
+.social-icons img{
+  margin-top: 15px;
+  width: 40px;
+  height: auto;
+}
+
+.footer_rights{
+  width: 100%;
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width:979px) {
+  .container{
     width: 100%;
-  
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
   }
-  
+  .footer_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5px;
+  }
+  .social-icon{
+    width: 100%;
+  }
+  .social-icons img{
+    width: 30px;
+  }
+}
